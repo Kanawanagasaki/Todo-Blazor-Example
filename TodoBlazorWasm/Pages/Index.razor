@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<h1 id="todoheader">Todos</h1>
+<ul aria-describedby="todoheader">
+    @foreach (var todo in Todos)
+    {
+        <li>
+            @todo
+        </li>
+    }
+</ul>
+<form @onsubmit="SubmitTodo">
+    <label>
+        <input @bind="TodoInput" />
+    </label>
+    <button>Submit</button>
+</form>
